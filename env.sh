@@ -43,6 +43,7 @@ then
 
     # We want to make sure that shell environment is as it should be
     curl -o ~/.profile https://raw.githubusercontent.com/lalarsson/env/master/.profile
+    curl -o ~/.editorconfig https://raw.githubusercontent.com/lalarsson/env/master/.editorconfig
     curl -o ~/.config/fish/config.fish https://raw.githubusercontent.com/lalarsson/env/master/config.fish
 
     # Gotta setup the docker-machine
@@ -59,12 +60,12 @@ curl -o ~/.vim/colors/wombat256.vim https://raw.githubusercontent.com/lalarsson/
 
 # Some stuff required for vim
 pip install pep8 neovim
-echo "$user_pass" | sudo -S command npm install jshint js-yaml jsonlint dockerfile_lint
+echo "$user_pass" | sudo -S command npm install  -g jshint js-yaml jsonlint dockerfile_lint tidy js-beautify
 echo "$user_pass" | sudo -S command gem install scss_lint mdl
 
 # Lets install all plugins for vim
 vim +PluginInstall +qall
-
+mkdir -p ~/.config/nvim/
 # For easier vim usage
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim

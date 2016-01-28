@@ -1,0 +1,35 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+quote_type = double
+spaces_around_operators = true
+spaces_around_brackets = inside
+indent_brace_style = K&R
+continuation_indent_size = 2
+
+
+[**.js]
+path=~/.vim/bundle/js-beautify/js/lib/beautify.js
+bin=node
+curly_bracket_next_line = false
+max_char = 80
+
+[**.json]
+
+[**.jsx]
+e4x = true
+
+[**.css]
+path=~/.vim/bundle/js-beautify/js/lib/beautify-css.js
+
+[**.html]
+vim:path=~/.vim/bundle/js-beautify/js/lib/beautify-html.js
+brace_style = expand
+max_char = 80
+
